@@ -1,0 +1,54 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}">
+
+    <title>OKayJosh</title>
+    </head>
+
+    <body>
+        <!------------ The heading --->
+        <nav class=" mt-2 my-2" role="nav">
+            <ul class="nav nav-pills nav-justified">
+                <li class="nav-item"><a class="nav-link active" id="home-link" href="/">Olatunji Joshua</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about/">About Me</a></li>
+                <li class="nav-item"><a class="nav-link"  href="/articles/">Articles</a></li>
+                <li class="nav-item"><a class="nav-link" href="/talks/">Talks</a></li>
+                <li class="nav-item"><a class="nav-link" href="/talks/">Projects</a></li>
+            </ul>
+        </nav>
+        <!----------- The Main Body -------->
+        <main class="content" role="main">
+                <div id="splash" class=" my-5 text-monospace text-center font-weight-bold">Django GrandMaster, Business Continuity Expert, Enterprenur, and speaker from Lagos/Nigeria.
+                </div>
+                <div>
+                <!-----Rendered post -->
+                </div>
+        </main>
+        <!------------ The Footer ----------->
+        <footer class="text-center">
+            <div class="inner">
+                <section class="footer-social">
+                    
+                    <a href="//twitter.com/Okayjosh001" target="_blank" title="Twitter"><i class="fa fa-2x fa-fw fa-twitter"></i> <span class="hidden">Twitter</span></a>&nbsp;
+                    
+                    
+                    <a href="//github.com/okayjosh" target="_blank" title="GitHub"><i class="fa fa-2x fa-fw fa-github"></i> <span class="hidden">GitHub</span></a>&nbsp;
+                    
+                    <a href="https://hynek.me/index.xml" target="_blank" title="RSS"><i class="fa fa-2x fa-fw fa-rss"></i> <span class="hidden">RSS</span></a>
+                </section>
+
+                <section class="source-org vcard copyright">© 2004–2019 <span class="org fn">Olatunji Joshua</span> <br>All Rights Reserved • <a href="/legal/">Impressum &amp; Privacy</a></section>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -17,8 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from markdownx import urls
 
-
 urlpatterns = [
+    path('', include('blog.urls')),
     path('admin/', admin.site.urls),
 
 ]

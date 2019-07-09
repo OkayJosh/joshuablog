@@ -9,6 +9,8 @@
    <!-- Bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <!---- fontawesome code kit -->
+    <script src="https://kit.fontawesome.com/1d8bb6ec77.js"></script>
     
     <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}">
 
@@ -17,7 +19,7 @@
 
     <body>
         <!------------ The heading --->
-        <nav class=" mt-2 my-2" role="nav">
+        <nav class="" role="nav">
             <ul class="nav nav-pills nav-justified">
                 <li class="nav-item"><a class="nav-link active" id="home-link" href="/">Olatunji Joshua</a></li>
                 <li class="nav-item"><a class="nav-link" href="/about/">About Me</a></li>
@@ -28,9 +30,13 @@
         </nav>
         <!----------- The Main Body -------->
         <main class="content" role="main">
-                <div id="splash" class=" my-5 text-monospace text-center font-weight-bold">Django GrandMaster, Business Continuity Expert, Enterprenur, and speaker from Lagos/Nigeria.
+                <div id="splash" class=" my-5 text-monospace text-center font-weight-bold heading">{% block heading %}Django Dev, Business Continuity, Enterprenur, and speaker from Lagos/Nigeria.{% endblock heading %}
+                <p>{% block quote %} &quotThe Future Belongs to those who learn more skills and combine them in Creative ways&quot -- <i>Robert Greene</i>{% endblock quote %}</p>
                 </div>
-                <div>
+                <div class="container">
+                {% block content %}
+                
+                {% endblock content %}
                 <!-----Rendered post -->
                 </div>
         </main>
@@ -38,15 +44,10 @@
         <footer class="text-center">
             <div class="inner">
                 <section class="footer-social">
-                    
-                    <a href="//twitter.com/Okayjosh001" target="_blank" title="Twitter"><i class="fa fa-2x fa-fw fa-twitter"></i> <span class="hidden">Twitter</span></a>&nbsp;
-                    
-                    
-                    <a href="//github.com/okayjosh" target="_blank" title="GitHub"><i class="fa fa-2x fa-fw fa-github"></i> <span class="hidden">GitHub</span></a>&nbsp;
-                    
-                    <a href="https://hynek.me/index.xml" target="_blank" title="RSS"><i class="fa fa-2x fa-fw fa-rss"></i> <span class="hidden">RSS</span></a>
+                    <a href="//twitter.com/Okayjosh001" target="_blank" title="Twitter"><i class="fab fa-twitter fa-2x"></i></a>&nbsp;
+                    <a href="//github.com/okayjosh" target="_blank" title="GitHub"><i class="fab fa-github fa-2x"></i></a>&nbsp;
+                    <a href="https://hynek.me/index.xml" target="_blank" title="RSS"><i class="fas fa-rss fa-2x"></i></a>
                 </section>
-
                 <section class="source-org vcard copyright">© 2004–2019 <span class="org fn">Olatunji Joshua</span> <br>All Rights Reserved • <a href="/legal/">Impressum &amp; Privacy</a></section>
             </div>
         </footer>

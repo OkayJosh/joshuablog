@@ -1,8 +1,12 @@
 body{
-background-color: aliceblue;
+background: linear-gradient(to right, #ebf1f6 0%,#abd3ee 41%,#89c3eb 100%,#d5ebfb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 font-size: 20px;
 }
 
-div {
-    
+#splash  {
+    color: rgb(4, 23, 71);
+}
+
+p{
+    font-weight: 200;
 }

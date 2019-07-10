@@ -1,6 +1,7 @@
 from django.db import models
 from markdownx.models import MarkdownxField
 from django.template.defaultfilters import slugify
+from markdownx.utils import markdownify
 
 CATEGORY = [
     ('1'), ('Article'),
@@ -16,6 +17,12 @@ class MyBlogModel(models.Model):
     post = MarkdownxField()
     slug = models.SlugField()
     pub_date = models.DateTimeField()
+
+    def formatted_markdown(self):
+        return markdownify(self.post)
+
+    def body_summary(self):
+        return markdownify(self.post[:300] + "...")
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)

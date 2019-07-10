@@ -3,19 +3,17 @@ from markdownx.models import MarkdownxField
 from django.template.defaultfilters import slugify
 from markdownx.utils import markdownify
 
-CATEGORY = [
-    ('1'), ('Article'),
-    ('2'), ('Talks'),
-    ('3'), ('Projects'),
-]
-
-
 class MyBlogModel(models.Model):
+    CATEGORY = (
+    ('AR', 'Article'),
+    ('TA', 'Talks'),
+    ('PR', 'Projects'),
+                            )
     title = models.CharField(max_length=200)
     created_by = models.CharField(max_length=200, default='etentlabs')
-    category = models.CharField(max_length=10, choices=CATEGORY, default='1'), 
+    # blog_type = models.CharField(max_length=10, choices=CATEGORY), 
     post = MarkdownxField()
-    slug = models.SlugField()
+    slug = models.SlugField( null=True, blank=True)
     pub_date = models.DateTimeField()
 
     def formatted_markdown(self):

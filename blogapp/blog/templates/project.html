@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block navlist %}
+    <li class="nav-item"><a class="nav-link" id="home-link" href="{% url 'home' %}"><i class="far fa-smile fa-2x"></i> Olatunji Joshua</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}"> <i class="fas fa-user-secret fa-2x"></i> About Me</a></li>
+    <li class="nav-item"><a class="nav-link active" href="{% url 'project' %}"> <i class="fas fa-place-of-worship fa-2x"></i> Projects</a></li>
+{% endblock navlist %}
+
+
+{% block quote %}Man Know thyself, the saying of hundreds of years, yet he knowns little{% endblock quote %}
+{% block author %}Olatunji Joshua{% endblock author %}
+
+{% block content %}
+
+{% endblock content %}

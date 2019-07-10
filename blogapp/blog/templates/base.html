@@ -21,22 +21,30 @@
         <!------------ The heading --->
         <nav class="" role="nav">
             <ul class="nav nav-pills nav-justified">
-                <li class="nav-item"><a class="nav-link active" id="home-link" href="/">Olatunji Joshua</a></li>
-                <li class="nav-item"><a class="nav-link" href="/about/">About Me</a></li>
-                <li class="nav-item"><a class="nav-link"  href="/articles/">Articles</a></li>
-                <li class="nav-item"><a class="nav-link" href="/talks/">Talks</a></li>
-                <li class="nav-item"><a class="nav-link" href="/talks/">Projects</a></li>
+            {% block navlist %}
+                <li class="nav-item"><a class="nav-link active" id="home-link" href="{% url 'home' %}"><i class="far fa-smile fa-2x"></i> Olatunji Joshua</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'about' %}"> <i class="fas fa-user-secret fa-2x"></i> About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'project' %}"> <i class="fas fa-place-of-worship fa-2x"></i> Projects</a></li>
+            {% endblock navlist %}
             </ul>
         </nav>
         <!----------- The Main Body -------->
         <main class="content" role="main">
-                <div id="splash" class=" my-5 text-monospace text-center font-weight-bold heading">{% block heading %}Django Dev, Business Continuity, Enterprenur, and speaker from Lagos/Nigeria.{% endblock heading %}
-                <p>{% block quote %} &quotThe Future Belongs to those who learn more skills and combine them in Creative ways&quot -- <i>Robert Greene</i>{% endblock quote %}</p>
+                <div id="splash" class=" my-5 text-monospace text-center font-weight-bold heading">{% block heading %}Enterprenur <i class="fas fa-chess-king"></i>, and speaker <i class="fas fa-bullhorn"></i> from Lagos/Nigeria.{% endblock heading %}
+                <p>&quot{% block quote %}The Future Belongs to those who learn more skills and combine them in Creative ways{% endblock quote %}&quot -- <i>{% block author %}Robert Greene{% endblock author %}</i></p>
                 </div>
                 <div class="container">
+                <div class="conatiner">
                 {% block content %}
                 
+Where does it come from?
+
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+
                 {% endblock content %}
+                </div>
                 <!-----Rendered post -->
                 </div>
         </main>
@@ -46,7 +54,7 @@
                 <section class="footer-social">
                     <a href="//twitter.com/Okayjosh001" target="_blank" title="Twitter"><i class="fab fa-twitter fa-2x"></i></a>&nbsp;
                     <a href="//github.com/okayjosh" target="_blank" title="GitHub"><i class="fab fa-github fa-2x"></i></a>&nbsp;
-                    <a href="https://hynek.me/index.xml" target="_blank" title="RSS"><i class="fas fa-rss fa-2x"></i></a>
+                    <a href="" target="_blank" title="RSS"><i class="fas fa-rss fa-2x"></i></a>
                 </section>
                 <section class="source-org vcard copyright">© 2004–2019 <span class="org fn">Olatunji Joshua</span> <br>All Rights Reserved • <a href="/legal/">Impressum &amp; Privacy</a></section>
             </div>

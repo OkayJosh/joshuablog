@@ -1,10 +1,10 @@
-from .views import HomeView, CreatePostView
+from .views import HomeView, AboutView, ProjectView
 from django.urls import path
 
 # app_name = 'blog'
 
 urlpatterns = [
     path('', HomeView.as_view(), name='home'),
-    path('create', CreatePostView.as_view(), name='create'),
-    
+    path('project', ProjectView.as_view(), name='project'),
+    path('about', AboutView.as_view(), name='about'),   
 ]
